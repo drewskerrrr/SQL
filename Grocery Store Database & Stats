@@ -1,0 +1,39 @@
+--Create a grocery store database
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, item TEXT, section TEXT, price INTEGER, popularity INTEGER);
+
+INSERT INTO store VALUES (1, "chicken breast", "meat",6.19 , 90);
+INSERT INTO store VALUES (2, "ground beef", "meat", 5.85, 95);
+INSERT INTO store VALUES (3, "ground turkey", "meat", 6.55, 85);
+INSERT INTO store VALUES (4, "corn", "produce", 0.99, 65);
+INSERT INTO store VALUES (5, "cucumber", "produce", .75, 35);
+INSERT INTO store VALUES (6, "frozen brussel sprouts", "frozen ", 2.02, 15);
+INSERT INTO store VALUES (7, "canned tuna", "canned meat", 3.65, 45);
+INSERT INTO store VALUES (8, "potatoes", "produce", 1.50, 80);
+INSERT INTO store VALUES (9, "shrimp", "seafood", 7.99, 85);
+INSERT INTO store VALUES (10, "salmon", "seafood", 8.99, 70);
+INSERT INTO store VALUES (11, "bottled water", "beverages", 5.65, 95);
+INSERT INTO store VALUES (12, "premier protein shakes", "health",7.99 , 60);
+INSERT INTO store VALUES (13, "apples", "produce", 1.99, 80);
+INSERT INTO store VALUES (14, "oranges", "produce", 1.25, 30);
+INSERT INTO store VALUES (15, "hot sauce", "condiments", 3.67, 55);
+
+
+--what are the most 5 popular items? 
+
+SELECT item, popularity
+FROM store
+order by popularity desc
+limit 10; 
+
+
+--what is the avg price of items in the produce section? 
+
+SELECT AVG(price) "avg produce item price"
+FROM store
+where section='produce'; 
+
+--display the database ordered by id. 
+
+SELECT * FROM store
+ORDER BY id asc; 
