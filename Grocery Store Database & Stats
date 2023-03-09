@@ -19,6 +19,12 @@ INSERT INTO store VALUES (14, "oranges", "produce", 1.25, 30);
 INSERT INTO store VALUES (15, "hot sauce", "condiments", 3.67, 55);
 
 
+--display the database ordered by id. 
+
+SELECT * FROM store
+ORDER BY id asc; 
+
+
 --what are the most 5 popular items? 
 
 SELECT item, popularity
@@ -33,7 +39,3 @@ SELECT AVG(price) "avg produce item price"
 FROM store
 where section='produce'; 
 
---display the database ordered by id. 
-
-SELECT * FROM store
-ORDER BY id asc; 
