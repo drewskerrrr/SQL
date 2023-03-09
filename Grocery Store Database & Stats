@@ -25,7 +25,7 @@ SELECT * FROM store
 ORDER BY id asc; 
 
 
---what are the most 5 popular items? 
+--what are the 5 most popular items? 
 
 SELECT item, popularity
 FROM store
